@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarvdany Fruits Supplier | Grapes Transport & Wholesale - Nashik</title>
+    <style>
+        :root {
+            --primary-color: #2e5d32;
+            --secondary-color: #558b2f;
+            --accent-color: #8bc34a;
+            --dark-color: #1b381e;
+            --light-bg: #f4f9f4;
+            --white: #ffffff;
+            --text-color: #333333;
+            --gray-color: #666666;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--dark-color), var(--primary-color));
+            color: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .cta-btn {
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            padding: 8px 18px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color: #7cb342;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(27, 56, 30, 0.8), rgba(46, 93, 50, 0.8)), url('https://images.unsplash.com/photo-1537640538966-79f369143f8f?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            color: var(--white);
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .badge-est {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+            border: 1px solid rgba(255,255,255,0.4);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .about-section {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            margin-bottom: 50px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .about-info-box {
+            background: var(--light-bg);
+            padding: 20px;
+            border-left: 5px solid var(--accent-color);
+            border-radius: 4px;
+        }
+
+        .about-info-box p {
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--gray-color);
+            font-size: 1.1rem;
+        }
+
+        .grape-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .grape-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .grape-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .grape-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .grape-header {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 12px 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .grape-header span.marathi {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .grape-body {
+            padding: 20px;
+        }
+
+        .grape-body p {
+            color: var(--gray-color);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background: var(--light-bg);
+            color: var(--primary-color);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid #d4edda;
+        }
+
+        .services-section {
+            background: var(--dark-color);
+            color: var(--white);
+            padding: 60px 20px;
+            border-radius: 8px;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .services-section h2 {
+            color: var(--accent-color);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+            text-align: left;
+        }
+
+        .service-item {
+            background: rgba(255,255,255,0.05);
+            padding: 25px;
+            border-radius: 6px;
+            border-top: 4px solid var(--accent-color);
+        }
+
+        .service-item h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .service-item p {
+            color: #cccccc;
+            font-size: 0.95rem;
+        }
+
+        .contact-section {
+            background: var(--white);
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .contact-info h3 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-detail {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .contact-detail strong {
+            color: var(--primary-color);
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--dark-color);
+        }
+
+        footer {
+            background: #111;
+            color: #888;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.95rem;
+        }
+
+        footer p {
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .about-section, .contact-section {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            nav ul {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                🍇 Sarvdany <span>Fruits Supplier</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#varieties">Grape Varieties</a></li>
+                    <li><a href="#services">Logistics</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="tel:9552335257" class="cta-btn">📞 Call Now</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="badge-est">✨ Serving Fresh Grapes Across All India Since 2005 ✨</div>
+        <h1>सर्वज्ञ फ्रूट्स सप्लायर</h1>
+        <p>Your Trusted Partner for Bulk Table Grapes, Cold-Chain Transport, and Pan-India Agricultural Logistics directly from Nashik.</p>
+        <a href="#contact" class="cta-btn" style="font-size: 1.1rem; padding: 12px 25px;">Book Bulk Order / Transport</a>
+    </section>
+
+    <div class="container">
+
+        <section id="about" class="about-section">
+            <div class="about-text">
+                <h2>About Our Business</h2>
+                <p>Welcome to <strong>Sarvdany Fruits Supplier</strong> (सर्वज्ञ फ्रूट्स सप्लायर). Operating since <strong>2005</strong>, we supply wholesale farm-fresh grapes with specialized cold-chain transport. Headquartered right at the major agricultural highway hub of <strong>Nandur Naka, Nashik</strong>, we connect local vineyards directly to markets all over India.</p>
+                <p>Led by <strong>Krushna Mahale</strong>, our operations ensure premium quality, timely dispatch, and dependable transport solutions for traders and markets nationwide.</p>
+            </div>
+            <div class="about-info-box">
+                <h3>Business Highlights</h3>
+                <p>📍 <strong>Main Office:</strong> Nandur Naka, Nashik</p>
+                <p>👤 <strong>Proprietor:</strong> Krushna Mahale (कृष्णा महाले)</p>
+                <p>📞 <strong>Mobile:</strong> +91 9552335257</p>
+                <p>📅 <strong>Established:</strong> 2005 (20+ Years Experience)</p>
+                <p>🇮🇳 <strong>Reach:</strong> Pan-India Delivery</p>
+            </div>
+        </section>
+
+        <div id="varieties" class="section-title">
+            <h2>Complete Grape Varieties Catalog (सर्व प्रकारची द्राक्षे)</h2>
+            <p>Direct from Nashik Vineyards with Photos & Wholesale Transport</p>
+        </div>
+
+        <div class="grape-grid">
+            <!-- 1. Thompson Seedless -->
+            <div class="grape-card">
+                <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQP-SIEz8BkBZt84Ki5cUELVxk8FDNMjlb4egK7lfsagbBXcl79iZE8A-T4WYrZY8aa99FBrjIjZsJt9TY" alt="Thompson Seedless Grapes" class="grape-img">
+                <div class="grape-header">
+                    Thompson Seedless
+                    <span class="marathi">थॉम्पसन</span>
+                </div>
+                <div class="grape-body">
+                    <p>The king of Indian grapes. Elongated oval berries, golden-green color, thin skin, and high sweetness.</p>
+                    <div class="tag-list">
+                        <span class="tag">Export Quality</span>
+                        <span class="tag">Green Seedless</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Sonaka -->
+            <div class="grape-card">
+                <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSeEk7G8FCiiMP2sLrCBUQTXWajcQG-K9pVYQdBj8YAvWL8m1GvDcn1e7_HxfAQ2Kb5PwErDfqCE-gtY3g" alt="Sonaka Grapes" class="grape-img">
+                <div class="grape-header">
+                    Sonaka
+                    <span class="marathi">सोनाका</span>
+                </div>
+                <div class="grape-body">
+                    <p>Known for extra-long berries and crisp texture. Extremely sweet and highly demanded in domestic markets.</p>
+                    <div class="tag-list">
+                        <span class="tag">Extra Long</span>
+                        <span class="tag">Crisp & Sweet</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Tas-A-Ganesh -->
+            <div class="grape-card">
+                <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcST6Qf-puu1Bfs72K2bZS6aUZJ858cPBefBTfXNMHJFe_QQvxDBMag37zX6gq5BmaAiaKvpQA1kOoq00-g" alt="Tas-A-Ganesh Grapes" class="grape-img">
+                <div class="grape-header">
+                    Tas-A-Ganesh
+                    <span class="marathi">तास-ए-गणेश</span>
+                </div>
+                <div class="grape-body">
+                    <p>A premier selection derived from Thompson. Features attractive round-oval green berries with rich sugary pulp.</p>
+                    <div class="tag-list">
+                        <span class="tag">Uniform Shape</span>
+                        <span class="tag">Juicy</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Manik Chaman -->
+            <div class="grape-card">
+                <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcTUjiHnVDguVubUmKcGZtZPNcPDF55kkN2SQrulvHgOpHJzs6MvqQkmkq6SU8S0AgMGOa_4pUY1gQac7YM" alt="Manik Chaman Grapes" class="grape-img">
+                <div class="grape-header">
+                    Manik Chaman
+                    <span class="marathi">माणिक चमन</span>
+                </div>
+                <div class="grape-body">
+                    <p>Popular for vibrant green-yellow bunches and excellent sweet flavor profile favored across Indian mandis.</p>
+                    <div class="tag-list">
+                        <span class="tag">Vibrant Green</span>
+                        <span class="tag">Mandis Favorite</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Sharad Seedless -->
+            <div class="grape-card">
+                <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcTw3QV6AREecOurPASMVXdMfatwMNV8coCuZIMLfXn42LlnzYVACoGjKPN0xHvPo17PLLZGAzXhkvZJbzs" alt="Sharad Seedless Black Grapes" class="grape-img">
+                <div class="grape-header">
+                    Sharad Seedless
+                    <span class="marathi">शरद सीडलेस (काळी)</span>
+                </div>
+                <div class="grape-body">
+                    <p>The premier black seedless variety. Deep purple-black skin, firm crunch, and rich flavor. High national demand.</p>
+                    <div class="tag-list">
+                        <span class="tag">Black Seedless</span>
+                        <span class="tag">Premium</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Flame Seedless -->
+            <div class="grape-card">
+                <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcQhE_pbEWvQwq7Xh-YhWO1gUX1Z3by7dmGIrQyWeZHOo0rnp8S5l7oyLtt1XnjdKLdughmS9o3wNSaD4-4" alt="Flame Seedless Red Grapes" class="grape-img">
+                <div class="grape-header">
+                    Flame Seedless
+                    <span class="marathi">फ्लम सीडलेस</span>
+                </div>
+                <div class="grape-body">
+                    <p>Bright red to dark purple-red seedless grapes with a delightful tart-sweet balance and firm texture.</p>
+                    <div class="tag-list">
+                        <span class="tag">Red Seedless</span>
+                        <span class="tag">Tangy-Sweet</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. Manjri Naveen -->
+            <div class="grape-card">
+                <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcR07JuK4oy_JnJihcfcrpcA5mSyxdxDvkFjyaRaXysFMnFYQ2lSpE8TDyArADy_tW60m30eTKb20pTz1yg" alt="Manjri Naveen Grapes" class="grape-img">
+                <div class="grape-header">
+                    Manjri Naveen
+                    <span class="marathi">मंजरी नवीन</span>
+                </div>
+                <div class="grape-body">
+                    <p>Locally bred variety known for early ripening, bold oval-shaped berries, and superior transport shelf-life.</p>
+                    <div class="tag-list">
+                        <span class="tag">ICAR Variety</span>
+                        <span class="tag">Long Shelf Life</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. Anab-e-Shahi -->
+            <div class="grape-card">
+                <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcS7docBL3qHSrOgaAhaSEb48PPMn8ASnHCLb5fUoAnDLVGBwloKFmjBThDOvIOsd7jsoyoDNRl2s8icEDI" alt="Anab-e-Shahi Grapes" class="grape-img">
+                <div class="grape-header">
+                    Anab-e-Shahi / Dilkhush
+                    <span class="marathi">अनाब-ए-शाही / दिलखुश</span>
+                </div>
+                <div class="grape-body">
+                    <p>Large, robust, seeded traditional table grapes. Very juicy and refreshing, widely loved across regional markets.</p>
+                    <div class="tag-list">
+                        <span class="tag">Seeded Table Grape</span>
+                        <span class="tag">Large Berries</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9. Bangalore Blue -->
+            <div class="grape-card">
+                <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcRjXQJZEYurEArB627qegK5vv6F2yAa_OdAncWQ6rJyPuIreQhyyILetyfAC76HcHwWWHbVvHWCg8OexHw" alt="Bangalore Blue Paneer Grapes" class="grape-img">
+                <div class="grape-header">
+                    Bangalore Blue (Paneer)
+                    <span class="marathi">पनीर द्राक्ष (देशी)</span>
+                </div>
+                <div class="grape-body">
+                    <p>Deep purple, aromatic seeded grapes with distinct floral muscat flavor. Widely used for fresh consumption.</p>
+                    <div class="tag-list">
+                        <span class="tag">Aromatic</span>
+                        <span class="tag">Juice & Fresh</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="services" class="services-section">
+            <h2>Our Core Services & Pan-India Transport</h2>
+            <p>From Nashik's agricultural heartland to every corner of India</p>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h3>🍇 Wholesale Grape Supply</h3>
+                    <p>Direct sourcing from top vineyards in Nashik and Maharashtra, graded and packed to professional standards.</p>
+                </div>
+                <div class="service-item">
+                    <h3>❄️ Temperature-Controlled Logistics</h3>
+                    <p>Ventilated and refrigerated trucks ensuring farm freshness, minimal bruising, and optimal humidity during transit.</p>
+                </div>
+                <div class="service-item">
+                    <h3>🇮🇳 Pan-India Delivery</h3>
+                    <p>Reliable cargo dispatch from Nandur Naka, Nashik to major mandis, cold storages, and markets all across India.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="contact-info">
+                <h3>Get in Touch with Us</h3>
+                <p>Looking for bulk grape supply or secure agricultural cargo transport? Call us directly or drop a message below.</p>
+                <br>
+                <div class="contact-detail"><strong>Business Name:</strong> Sarvdany Fruits Supplier (सर्वज्ञ फ्रूट्स सप्लायर)</div>
+                <div class="contact-detail"><strong>Proprietor:</strong> Krushna Mahale (कृष्णा महाले)</div>
+                <div class="contact-detail"><strong>Mobile Number:</strong> <a href="tel:9552335257" style="color: var(--primary-color); text-decoration: none;">+91 9552335257</a></div>
+                <div class="contact-detail"><strong>Main Office Address:</strong> Nandur Naka, Nashik, Maharashtra - 422004</div>
+                <div class="contact-detail"><strong>Experience:</strong> Trusted since 2005</div>
+            </div>
+            <div class="contact-form">
+                <h3 style="color: var(--primary-color); margin-bottom: 20px;">Send Inquiry</h3>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Mobile Number" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Required Grape Variety / Destination">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Enter your inquiry or bulk order details..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit Inquiry</button>
+                </form>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2005 - 2026 Sarvdany Fruits Supplier. All Rights Reserved.</p>
+        <p>Head Office: Nandur Naka, Nashik | Proprietor: Krushna Mahale | Contact: 9552335257</p>
+    </footer>
+
+</body>
+</html>
